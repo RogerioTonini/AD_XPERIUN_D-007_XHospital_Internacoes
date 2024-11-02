@@ -1,4 +1,4 @@
-ALTER FUNCTION dbo.fxDiretorioExiste(@Caminho VARCHAR(255))
+CREATE FUNCTION dbo.fxDiretorioExiste(@Caminho VARCHAR(255))
 RETURNS BIT
 AS
 BEGIN
@@ -8,7 +8,7 @@ BEGIN
 	-- Executar o comando usando xp_cmdshell
 	EXEC @Resp = xp_cmdshell @Comando, NO_OUTPUT
 	
-	-- Retornar 1 se o diretório existir (comando executado com sucesso), caso contrário 0
+	-- Retornar 1 se o diretï¿½rio existir (comando executado com sucesso), caso contrï¿½rio 0
 	RETURN 
 		CASE WHEN @Resp = 0 THEN 1 ELSE 0 
 		END
