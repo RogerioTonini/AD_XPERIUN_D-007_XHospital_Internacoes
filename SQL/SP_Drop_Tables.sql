@@ -3,7 +3,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[SP_Drop_Tables]
+ALTER PROCEDURE [dbo].[SP_Drop_Tables]
 AS
 BEGIN
     DECLARE 
@@ -23,12 +23,13 @@ BEGIN
     VALUES
         (1, 'T_Classe_Procedimento')
         , (2, 'T_Convenio')
-        , (3, 'T_Internacao')
-        , (4, 'T_Medico')
-        , (5, 'T_Paciente')
-        , (6, 'T_Procedimento')
-        , (7, 'T_Tipo_Acomodacao')
-        , (8, 'T_Tipo_Alta')
+        , (3, 'T_Faixa_Idade')
+        , (4, 'T_Internacao')
+        , (5, 'T_Medico')
+        , (6, 'T_Paciente')
+        , (7, 'T_Procedimento')
+        , (8, 'T_Tipo_Acomodacao')
+        , (9, 'T_Tipo_Alta')
     -- Loop de Criação de Tabelas
     SELECT 
         @QTD_TABELAS = COUNT(*)

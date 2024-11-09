@@ -1,0 +1,12 @@
+ID_Faixa,Descr_Faixa,IdadeInicio,IdadeFim
+1,"Idade entre 0 - 10",0,10
+2,"Idade entre 11 - 20",11,20
+3,"Idade entre 21 - 30",21,30
+4,"Idade entre 31 - 40",31,40
+5,"Idade entre 41 - 50",41,50
+6,"Idade entre 51 - 60",51,60
+7,"Idade entre 61 - 70",61,70
+8,"Idade entre 71 - 80",71,80
+9,"Idade entre 81 - 90",81,90
+10,"Idade entre 91 - 100",91,100
+11,"Idade entre 101 - 110",101,110

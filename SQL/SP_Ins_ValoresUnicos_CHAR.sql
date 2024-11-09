@@ -1,14 +1,17 @@
+USE [DB_Hospital]
 SET ANSI_NULLS ON
 GO
+
 SET QUOTED_IDENTIFIER ON
 GO
-ALTER PROCEDURE [dbo].[SP_Ins_ValoresUnicos_CHAR]
-    @Tb_Origem       NVARCHAR(30),
-    @Alias_Tb_Origem NVARCHAR(5),
-    @Coluna_Origem   NVARCHAR(50),
-    @Tb_Destino      NVARCHAR(30),
-    @Alias_Tb_Dest   NVARCHAR(5),
-    @Coluna_Destino  NVARCHAR(50)
+
+CREATE PROCEDURE [dbo].[SP_Ins_ValoresUnicos_CHAR]
+    @Tb_Origem       NVARCHAR(30)
+    , @Alias_Tb_Origem NVARCHAR(5)
+    , @Coluna_Origem   NVARCHAR(50)
+    , @Tb_Destino      NVARCHAR(30)
+    , @Alias_Tb_Dest   NVARCHAR(5)
+    , @Coluna_Destino  NVARCHAR(50)
 AS
 BEGIN
     DECLARE 
