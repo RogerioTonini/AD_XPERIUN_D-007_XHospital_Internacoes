@@ -1,12 +1,10 @@
-USE [DB_Hospital]
-
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-CREATE PROCEDURE [dbo].[SP_Ins_ValoresUnicos_CHAR]
-    @Tb_Origem         NVARCHAR(30)
+ALTER PROCEDURE [dbo].[SP_Ins_ValoresUnicos_CHAR]
+    @Tb_Origem       NVARCHAR(30)
     , @Alias_Tb_Origem NVARCHAR(5)
     , @Coluna_Origem   NVARCHAR(50)
     , @Tb_Destino      NVARCHAR(30)
@@ -34,7 +32,7 @@ BEGIN
                     FROM ' 
                         + QUOTENAME(@Tb_Destino) + N' ' + QUOTENAME(@Alias_Tb_Dest) + N'
                     WHERE ' 
-                        + QUOTENAME(@Alias_Tb_Dest)   + N'.' + QUOTENAME(@Coluna_Destino) + N' = ' 
+                        + QUOTENAME(@Alias_Tb_Dest) + N'.' + QUOTENAME(@Coluna_Destino) + N' = ' 
                         + QUOTENAME(@Alias_Tb_Origem) + N'.' + QUOTENAME(@Coluna_Origem) + N'
                 ) 
             AND NULLIF(' + QUOTENAME(@Alias_Tb_Origem) + N'.' + QUOTENAME(@Coluna_Origem) + N', '''') IS NOT NULL
